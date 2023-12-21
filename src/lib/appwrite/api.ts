@@ -190,3 +190,11 @@ export async function getRecentPosts() {
     console.log(error);
   }
 }
+
+export async function likePost(postId: string, likesArray: string[]) {
+  try {
+    const updatePost = await databases.updateDocument();
+  } catch (error) {
+    console.log(error);
+  }
+}
