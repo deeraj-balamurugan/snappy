@@ -1,6 +1,6 @@
 import { ID, Query } from "appwrite";
+import { appwriteConfig, account, databases, storage, avatars } from "./config";
 import { INewPost, INewUser } from "@/types";
-import { account, appwriteConfig, avatars, databases, storage } from "./config";
 
 export async function createUserAccount(user: INewUser) {
   try {
@@ -193,7 +193,7 @@ export async function getRecentPosts() {
 
 export async function likePost(postId: string, likesArray: string[]) {
   try {
-    const updatePost = await databases.updateDocument(
+    const updatedPost = await databases.updateDocument(
       appwriteConfig.databaseId,
       appwriteConfig.postCollectionId,
       postId,
@@ -202,9 +202,9 @@ export async function likePost(postId: string, likesArray: string[]) {
       }
     );
 
-    if (!updatePost) throw Error;
+    if (!updatedPost) throw Error;
 
-    return updatePost;
+    return updatedPost;
   } catch (error) {
     console.log(error);
   }
@@ -212,7 +212,7 @@ export async function likePost(postId: string, likesArray: string[]) {
 
 export async function savePost(postId: string, userId: string) {
   try {
-    const updatePost = await databases.createDocument(
+    const updatedPost = await databases.createDocument(
       appwriteConfig.databaseId,
       appwriteConfig.savesCollectionId,
       ID.unique(),
@@ -222,9 +222,9 @@ export async function savePost(postId: string, userId: string) {
       }
     );
 
-    if (!updatePost) throw Error;
+    if (!updatedPost) throw Error;
 
-    return updatePost;
+    return updatedPost;
   } catch (error) {
     console.log(error);
   }
