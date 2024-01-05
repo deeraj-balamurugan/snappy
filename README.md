@@ -1,5 +1,22 @@
 # Full Stack Snappy Social Media App | React JS, Appwrite, Tailwind CSS, React Query
 
+## 📋 <a name="table">Table of Contents</a>
+
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🕸️ [Snippets](#snippets)
+6. 🔗 [Links](#links)
+7. 🚀 [More](#more)
+
+## <a name="introduction">🤖 Introduction</a>
+
+Explore social media with this user-friendly platform that has a nice look and lots of features. Easily create and explore posts, and enjoy a strong authentication system and quick data fetching using React Query for a smooth user experience.
+
+If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
+
+
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - React.js
